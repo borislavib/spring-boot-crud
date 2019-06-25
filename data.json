@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "genus": "Nolina",
+    "subfamily": "Nolinoideae",
+    "distribution": [
+      "S America",
+      "Europe"
+    ]
+  },
+  {
+    "id": "2",
+    "genus": "Nerium",
+    "subfamily": "Apocynoideae",
+    "distribution": [
+      "S America",
+      "Worldwide"
+    ]
+  },
+  {
+    "id": "3",
+    "genus": "Spathiphyllum",
+    "subfamily": "Monsteroideae",
+    "distribution": [
+      "S America",
+      "Asia"
+    ]
+  },
+  {
+    "id": "4",
+    "genus": "Alocasia",
+    "subfamily": "Aroideae",
+    "distribution": [
+      "S America",
+       "Asia"
+    ]
+  }
+]
