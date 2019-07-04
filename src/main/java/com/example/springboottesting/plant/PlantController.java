@@ -17,10 +17,10 @@ public class PlantController {
         return plantService.getAllPlants();
     }
 
-//    @RequestMapping("/plants/{id}")
-//    public Plant getPlant(@PathVariable String id) {
-//        return plantService.getPlant(id);
-//    }
+    @RequestMapping("/plants/{id}")
+    public Plant getPlant(@PathVariable String id) {
+        return plantService.getPlant(id);
+    }
 
     @RequestMapping(method = RequestMethod.POST, value = "/plants")
     public void addPlant(@RequestBody Plant plant) {
