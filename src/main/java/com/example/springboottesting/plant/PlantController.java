@@ -18,7 +18,7 @@ public class PlantController {
     }
 
     @RequestMapping("/plants/{id}")
-    public Plant getPlant(@PathVariable String id) {
+    public Plant getPlant(@PathVariable int id) {
         return plantService.getPlant(id);
     }
 
@@ -28,12 +28,12 @@ public class PlantController {
     }
 
     @RequestMapping(method = RequestMethod.PUT, value = "/plants/{id}")
-    public void updatePlant(@RequestBody Plant plant, @PathVariable String id) {
+    public void updatePlant(@RequestBody Plant plant, @PathVariable int id) {
         plantService.updatePlant(id, plant);
     }
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/plants/{id}")
-    public void deletePlant(@PathVariable String id) {
+    public void deletePlant(@PathVariable int id) {
         plantService.deletePlant(id);
     }
 }

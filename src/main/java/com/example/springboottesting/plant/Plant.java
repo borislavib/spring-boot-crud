@@ -1,20 +1,23 @@
 package com.example.springboottesting.plant;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import javax.validation.constraints.Size;
 
 @Entity
+@Table(name = "plant")
 public class Plant {
 
     @Id
-    private String id; // Int ?
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
     private String genus;
+    @Size(min = 3, max = 20)
     private String subfamily;
     private String distribution;
 
     public Plant() { }
 
-    public Plant(String id, String genus, String subfamily, String distribution) {
+    public Plant(int id, String genus, String subfamily, String distribution) {
         super();
         this.id = id;
         this.genus = genus;
@@ -22,11 +25,11 @@ public class Plant {
         this.distribution = distribution;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

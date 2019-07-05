@@ -20,7 +20,7 @@ public class PlantService {
         return plants;
     }
 
-    public Plant getPlant(String id) {
+    public Plant getPlant(int id) {
 
         List<Plant> plants = new ArrayList<>();
         plantRepository.findAll()
@@ -28,10 +28,13 @@ public class PlantService {
 
         for (int i = 0; i < plants.size(); i++) {
             Plant t = plants.get(i);
-
-            if (t.getId().equals(id)) {
+            if (t.getId() == id) {
                 return t;
             }
+//
+//            if (t.getId().equals(id)) {
+//                return t;
+//            }
         }
 
         return null;
@@ -42,11 +45,11 @@ public class PlantService {
         plantRepository.save(plant);
     }
 
-    public void updatePlant(String id, Plant plant) {
+    public void updatePlant(int id, Plant plant) {
         plantRepository.save(plant);
     }
 
-    public void deletePlant(String id) {
+    public void deletePlant(int id) {
         plantRepository.deleteById(id);
     }
 
