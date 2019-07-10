@@ -18,6 +18,10 @@ Listing all records
 
     curl -v localhost:3000/plants
 
+List particular record 
+
+    curl -X GET localhost:3000/plants/2
+
 Delete a record
 
     curl -X DELETE localhost:3000/plants/2
