@@ -1,10 +1,29 @@
 package com.example.springboottesting.plant;
 
+<<<<<<< HEAD
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "plant")
+=======
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+//import org.hibernate.annotations.Table;
+import org.json.JSONArray;
+import org.json.JSONException;
+//import org.springframework.data.annotation.Id;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+@Table(name="plant")
+>>>>>>> es100-6
 public class Plant {
 
     @Id
