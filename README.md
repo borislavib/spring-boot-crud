@@ -1,7 +1,4 @@
-# Basic CRUD application with Spring Boot
-
-Spring Boot simple project with branches for different tasks
-
+# Basic CRUD application with Spring Boot with branches for different tasks
 
 Running the application
 
@@ -12,9 +9,10 @@ or
     mvn clean spring-boot:run
 
 
-Adding new record
+Add new record
 
-    curl -X POST localhost:3000/plants/2 -H 'Content-type:application/json' -d  '{ "genus": "Nolina", "subfamily": "Nolinoideae", "distribution": "S America" }'
+    curl -X POST localhost:3000/plants/ -H 'Content-type:application/json' -d  \
+    '{ "genus": "Nolina", "subfamily": "Nolinoideae", "distribution": "S America" }'
 
 Listing all records
 
@@ -26,5 +24,6 @@ Delete a record
 
 Update
 
-    curl -X PUT localhost:3000/plants/2 -H 'Content-type:application/json' -d  '{ "genus": "Nolina", "subfamily": "Nolinoideae", "distribution": "South America" }'
+    curl -X PUT localhost:3000/plants/2 -H 'Content-type:application/json' -d  \
+    '{ "genus": "Nolina", "subfamily": "Nolinoideae", "distribution": "South America" }'
 

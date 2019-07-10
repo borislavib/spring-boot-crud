@@ -75,7 +75,8 @@
 	</dependencies>
 
 	<build>
-		<!--<filters>-->
+
+			<!--<filters>-->
 			<!--<filter>src/main/resources/env/application.${env}.properties</filter>-->
 		<!--</filters>-->
 
@@ -94,14 +95,31 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-help-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>show-profiles</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>active-profiles</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
 		</plugins>
 	</build>
 
 
 
 	<profiles>
-		<profile>
-			<id>xtest</id>
+
+        <profile>
+			<id>dev</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
@@ -109,31 +127,20 @@
 				<maven.test.skip>true</maven.test.skip>
 			</properties>
 		</profile>
-		<profile>
-			<id>dev</id>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-			<properties>
-				<env>dev</env>
-			</properties>
+
+        <profile>
+			<id>test</id>
+			<!--<properties>-->
+				<!--<env>dev</env>-->
+			<!--</properties>-->
 		</profile>
-		<profile>
+
+        <profile>
 			<id>prod</id>
 			<properties>
 				<env>prod</env>
 			</properties>
 		</profile>
-
-		<profile>
-			<id>test</id>
-			<properties>
-				<env>test</env>
-			</properties>
-		</profile>
-
-
-
 
 	</profiles>
 </project>
