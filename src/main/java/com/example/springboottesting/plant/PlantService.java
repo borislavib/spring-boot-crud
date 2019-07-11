@@ -1,6 +1,7 @@
 package com.example.springboottesting.plant;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -12,6 +13,12 @@ public class PlantService {
     @Autowired
     private PlantRepository plantRepository;
 
+    @Value("${welcome.message}")
+    private String welcomeMessage;
+
+    public String welcome() {
+        return welcomeMessage;
+    }
 
     public List<Plant> getAllPlants() {
         List<Plant> plants = new ArrayList<>();

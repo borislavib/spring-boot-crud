@@ -9,6 +9,18 @@ or
     mvn clean spring-boot:run
 
 
+Create a jar file from the project
+
+    mvn clean package
+
+Run from jar file, default profile
+
+    java -jar target/springboottesting-0.0.1-SNAPSHOT.jar
+
+Run from jar file, dev profile
+
+    java -jar target/springboottesting-0.0.1-SNAPSHOT.jar --spring.profiles.active=dev
+
 Add new record
 
     curl -X POST localhost:3000/plants/ -H 'Content-type:application/json' -d  \

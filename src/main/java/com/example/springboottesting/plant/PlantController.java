@@ -1,6 +1,7 @@
 package com.example.springboottesting.plant;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
@@ -11,6 +12,11 @@ public class PlantController {
 
     @Autowired
     private PlantService plantService;
+
+    @RequestMapping("/")
+    public String welcome() {
+        return plantService.welcome();
+    }
 
     @RequestMapping("/plants")
     public List<Plant> getAllPlants() {
