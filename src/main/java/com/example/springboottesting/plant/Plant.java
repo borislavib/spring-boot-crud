@@ -8,7 +8,7 @@ import javax.validation.constraints.Size;
 public class Plant {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+//    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String genus;
     @Size(min = 3, max = 20)

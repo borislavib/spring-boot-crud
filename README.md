@@ -24,7 +24,7 @@ Run from jar file, dev profile
 Add new record
 
     curl -X POST localhost:3000/plants/ -H 'Content-type:application/json' -d  \
-    '{ "genus": "Nolina", "subfamily": "Nolinoideae", "distribution": "S America" }' \
+    '{"id": 1, "genus": "Nolina", "subfamily": "Nolinoideae", "distribution": "S America" }' \
     && echo
 
 Listing all records
@@ -33,15 +33,15 @@ Listing all records
 
 List particular record 
 
-    curl -X GET localhost:3000/plants/2 && echo
+    curl -X GET localhost:3000/plants/1 && echo
 
 Update
 
-    curl -X PUT localhost:3000/plants/2 -H 'Content-type:application/json' -d  \
-    '{ "genus": "Nolina", "subfamily": "Nolinoideae", "distribution": "South America" }' \
+    curl -X PUT localhost:3000/plants/1 -H 'Content-type:application/json' -d  \
+    '{"id": 1, "genus": "Nolina", "subfamily": "Nolinoideae", "distribution": "South America" }' \
      && echo
 
 Delete a record
 
-    curl -X DELETE localhost:3000/plants/2
+    curl -X DELETE localhost:3000/plants/1
 
