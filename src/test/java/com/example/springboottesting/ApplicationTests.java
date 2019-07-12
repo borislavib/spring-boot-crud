@@ -17,16 +17,13 @@ import static org.junit.Assert.assertTrue;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @DataJpaTest
-public class SpringboottestingApplicationTests {
+public class ApplicationTests {
 
 	@Autowired
 	private TestEntityManager entityManager;
 
 	@Autowired
 	private PlantRepository plantRepository;
-
-	// write test cases here
-
 
 	@Test
 	public void contextLoads() {

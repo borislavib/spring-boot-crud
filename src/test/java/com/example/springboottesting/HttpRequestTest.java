@@ -1,5 +1,6 @@
 package com.example.springboottesting;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -22,6 +23,10 @@ public class HttpRequestTest {
     @Autowired
     private TestRestTemplate restTemplate;
 
+    @Autowired
+//    private PlantController restTemplate;
+
+//    @Ignore
     @Test
     public void greetingShouldReturnDefaultMessage() throws Exception {
         assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/",

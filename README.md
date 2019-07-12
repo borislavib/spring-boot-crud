@@ -1,4 +1,4 @@
-# Basic CRUD application with Spring Boot with branches for different tasks
+# Spring Boot CRUD application with branches for different tasks
 
 Running the application
 
@@ -24,22 +24,24 @@ Run from jar file, dev profile
 Add new record
 
     curl -X POST localhost:3000/plants/ -H 'Content-type:application/json' -d  \
-    '{ "genus": "Nolina", "subfamily": "Nolinoideae", "distribution": "S America" }'
+    '{ "genus": "Nolina", "subfamily": "Nolinoideae", "distribution": "S America" }' \
+    && echo
 
 Listing all records
 
-    curl -v localhost:3000/plants
+    curl -v localhost:3000/plants && echo
 
 List particular record 
 
-    curl -X GET localhost:3000/plants/2
-
-Delete a record
-
-    curl -X DELETE localhost:3000/plants/2
+    curl -X GET localhost:3000/plants/2 && echo
 
 Update
 
     curl -X PUT localhost:3000/plants/2 -H 'Content-type:application/json' -d  \
-    '{ "genus": "Nolina", "subfamily": "Nolinoideae", "distribution": "South America" }'
+    '{ "genus": "Nolina", "subfamily": "Nolinoideae", "distribution": "South America" }' \
+     && echo
+
+Delete a record
+
+    curl -X DELETE localhost:3000/plants/2
 

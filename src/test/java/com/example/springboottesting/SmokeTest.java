@@ -1,6 +1,5 @@
 package com.example.springboottesting;
 
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 import com.example.springboottesting.plant.PlantController;
