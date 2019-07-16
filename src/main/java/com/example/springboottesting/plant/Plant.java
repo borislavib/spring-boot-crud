@@ -56,5 +56,15 @@ public class Plant {
     public void setDistribution(String distribution) {
         this.distribution = distribution;
     }
+
+    @Override
+    public String toString() {
+        return "Plant{" +
+                "id=" + id +
+                ", genus='" + genus + '\'' +
+                ", subfamily='" + subfamily + '\'' +
+                ", distribution='" + distribution + '\'' +
+                '}';
+    }
 }
 

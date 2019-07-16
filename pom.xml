@@ -23,6 +23,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-rest-hal-browser</artifactId>
@@ -34,11 +35,13 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
         <dependency>
             <groupId>com.vaadin.external.google</groupId>
             <artifactId>android-json</artifactId>
@@ -52,13 +55,7 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.apache.derby.wso2/derby -->
-		<!--<dependency>-->
-			<!--<groupId>org.apache.derby</groupId>-->
-			<!--<artifactId>derby</artifactId>-->
-			<!--<scope>runtime</scope>-->
-		<!--</dependency>-->
-		<dependency>
+    	<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<!--<scope>test</scope>-->
@@ -71,12 +68,22 @@
 			<version>2.0.5.RELEASE</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>5.1.8.RELEASE</version>
+		</dependency>
 
 	</dependencies>
 
 	<build>
 
-			<!--<filters>-->
+		<!--<filters>-->
 			<!--<filter>src/main/resources/env/application.${env}.properties</filter>-->
 		<!--</filters>-->
 
