@@ -52,13 +52,9 @@ public class Application implements CommandLineRunner {
 		// Uses JdbcTemplate's batchUpdate operation to bulk load data
 		jdbcTemplate.batchUpdate("INSERT INTO plant(genus, subfamily, distribution) VALUES (?,?,?)", splitUpNames);
 
-
 		/// int id, String genus, String subfamily, String distribution
 		log.info("Querying for plant records where plant = 'Nerium':");
-//		jdbcTemplate.query(
-////				"SELECT id, genus, subfamily, distribution FROM plant WHERE genus = ?", new Object[] { "Nerium" },
-//////				(rs, rowNum) -> new Plant(rs.getLong("id"), rs.getString("first_name"), rs.getString("last_name"))
-//		).forEach(plant -> log.info(plant.toString()));
+ 		// TBD
 	}
 
 }
